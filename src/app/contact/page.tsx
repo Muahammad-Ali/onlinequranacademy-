@@ -118,9 +118,9 @@ export default function ContactPage() {
 
               <div className="space-y-6 mb-8">
                 {[
-                  { icon: <Phone className="w-6 h-6" />, title: "UK Phone", text: "+44 203 289 9880" },
-                  { icon: <Phone className="w-6 h-6" />, title: "USA Phone", text: "+1 330 597 5880" },
-                  { icon: <Mail className="w-6 h-6" />, title: "Email", text: "Info@quranlearnacademy.com" },
+                  { icon: <Phone className="w-6 h-6" />, title: "pk Phone", text: "03121589993" },
+                  // { icon: <Phone className="w-6 h-6" />, title: "USA Phone", text: "+1 330 597 5880" },
+                  { icon: <Mail className="w-6 h-6" />, title: "Email", text: "ilmulquranvirtualtutor@gmail.com" },
                   {
                     icon: <MapPin className="w-6 h-6" />,
                     title: "Service Area",

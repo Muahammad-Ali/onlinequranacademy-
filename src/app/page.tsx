@@ -21,7 +21,11 @@ import {
   Globe,
   Shield,
   Heart,
+  MessageCircle
+
 } from "lucide-react"
+
+
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -63,11 +67,11 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2 relative z-10">
           <div className="flex flex-col md:flex-row md:space-x-6 space-y-1 md:space-y-0">
             <span className="flex items-center animate-slideInLeft stagger-1">
-              <Phone className="w-3 h-3 mr-2" /> USA +1 330 597 5880
+              <Phone className="w-3 h-3 mr-2" /> Pak +92 3121589993
             </span>
-            <span className="flex items-center animate-slideInLeft stagger-2">
+            {/* <span className="flex items-center animate-slideInLeft stagger-2">
               <Phone className="w-3 h-3 mr-2" /> UK +44 203 289 9880
-            </span>
+            </span> */}
             <span className="flex items-center animate-slideInLeft stagger-3">
               <Mail className="w-3 h-3 mr-2" /> info@quranlearnacademy.com
             </span>
@@ -99,18 +103,28 @@ export default function Home() {
           <div
             className={`flex items-center transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
           >
-            <div className="animate-float">
-              <BookOpen className="w-8 h-8 text-black mr-3" />
+            {/* Logo Section */}
+            <div className="animate-float flex items-center mr-3">
+              <img
+                src="/logo.jpeg"
+                alt="Quran Learn Academy Logo"
+                className="w-20 h-20 object-contain rounded-full shadow-md"
+              />
             </div>
+
+
+            {/* Title */}
             <h1 className="text-2xl font-bold text-black text-reveal">
               QURAN <span className="text-yellow-600 gradient-text">LEARN ACADEMY</span>
             </h1>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <button className="md:hidden text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X /> : <Menu />}
           </button>
 
+          {/* Navigation */}
           <nav
             className={`${isMenuOpen ? "block" : "hidden"} md:block absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none transition-all duration-300`}
           >
@@ -138,11 +152,10 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-
-
           </nav>
         </div>
       </header>
+
 
       {/* Hero Section */}
       <section
@@ -168,17 +181,26 @@ export default function Home() {
               Learn the Holy Quran from experienced teachers with flexible schedules and personalized attention
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp stagger-4">
-              <Button className="bg-yellow-600 hover:bg-yellow-700 text-black font-bold px-8 py-4 text-lg rounded-lg btn-enhanced">
-                <Play className="w-5 h-5 mr-2" />
-                Register Online
-              </Button>
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black font-bold px-8 py-4 text-lg rounded-lg btn-enhanced bg-transparent"
+              <a
+                href="https://wa.me/923121589993"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-600 hover:bg-yellow-700 text-black font-bold px-8 py-4 text-lg rounded-lg btn-enhanced inline-flex items-center justify-center gap-2 cursor-pointer transition-transform hover:scale-105"
               >
-                <Globe className="w-5 h-5 mr-2" />
-                Free Trial Class
-              </Button>
+                <MessageCircle className="w-5 h-5" />
+                Register Online
+              </a>
+
+
+               <a
+                href="https://wa.me/923121589993"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-600 hover:bg-yellow-700 text-black font-bold px-8 py-4 text-lg rounded-lg btn-enhanced inline-flex items-center justify-center gap-2 cursor-pointer transition-transform hover:scale-105"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Contuct for free trail
+              </a>
             </div>
           </div>
         </div>
@@ -186,12 +208,12 @@ export default function Home() {
 
       {/* Steps Section */}
       <section className="py-20 bg-white section-transition"
-       style={{
+        style={{
           backgroundImage: `url('/quran.jpg')`,
           transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
-        
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold text-black mb-4">Begin Learning Quran Now in 3 Easy Steps</h2>
@@ -457,8 +479,8 @@ export default function Home() {
 
               <div className="space-y-6">
                 {[
-                  { icon: <Phone className="w-6 h-6" />, text: "UK +44 203 289 9880" },
-                  { icon: <Phone className="w-6 h-6" />, text: "USA 03121589993" },
+                  { icon: <Phone className="w-6 h-6" />, text: "UK +92 3121589993" },
+                  // { icon: <Phone className="w-6 h-6" />, text: "USA 03121589993" },
                   { icon: <Mail className="w-6 h-6" />, text: "ilmulquranvirtualtutor@gmail.com" },
                   { icon: <MapPin className="w-6 h-6" />, text: "Online Quran Academy - Serving Worldwide" },
                 ].map((contact, index) => (
