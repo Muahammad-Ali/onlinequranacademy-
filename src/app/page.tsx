@@ -209,7 +209,7 @@ export default function Home() {
       {/* Steps Section */}
       <section className="py-20 bg-white section-transition"
         style={{
-          backgroundImage: `url('/quran.jpg')`,
+          // backgroundImage: `url('/quran.jpg')`,
           transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
@@ -264,7 +264,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-black text-white section-transition">
+      {/* <section className="py-20 bg-black text-white section-transition">
         <div className="absolute inset-0 islamic-pattern opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -312,7 +312,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white section-transition">
@@ -393,7 +393,7 @@ export default function Home() {
                 className={`bg-white text-black border-0 shadow-xl card-hover scroll-reveal stagger-${index + 1}`}
               >
                 <CardContent className="p-8 relative">
-                  <div className="text-6xl text-gray-200 absolute top-4 left-4 font-serif">"</div>
+                  <div className="text-6xl text-gray-200 absolute top-4 left-4 font-serif"></div>
                   <div className="flex mb-4 relative z-10">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -479,7 +479,7 @@ export default function Home() {
 
               <div className="space-y-6">
                 {[
-                  { icon: <Phone className="w-6 h-6" />, text: "UK +92 3121589993" },
+                  { icon: <Phone className="w-6 h-6" />, text: "pak +92 3121589993" },
                   // { icon: <Phone className="w-6 h-6" />, text: "USA 03121589993" },
                   { icon: <Mail className="w-6 h-6" />, text: "ilmulquranvirtualtutor@gmail.com" },
                   { icon: <MapPin className="w-6 h-6" />, text: "Online Quran Academy - Serving Worldwide" },
