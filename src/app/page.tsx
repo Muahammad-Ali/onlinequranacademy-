@@ -539,15 +539,15 @@ export default function Home() {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center animate-slideInRight stagger-1">
                   <Phone className="w-4 h-4 mr-3 text-yellow-400" />
-                  <span>UK +44 203 289 9880</span>
+                  <span>PK +92 3121589993</span>
                 </li>
-                <li className="flex items-center animate-slideInRight stagger-2">
+                {/* <li className="flex items-center animate-slideInRight stagger-2">
                   <Phone className="w-4 h-4 mr-3 text-yellow-400" />
                   <span>USA +1 330 597 5880</span>
-                </li>
+                </li> */}
                 <li className="flex items-center animate-slideInRight stagger-3">
                   <Mail className="w-4 h-4 mr-3 text-yellow-400" />
-                  <span>Info@quranlearnacademy.com</span>
+                  <span>ilmulquranvirtualtutor@gmail.com</span>
                 </li>
               </ul>
             </div>
